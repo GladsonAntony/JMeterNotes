@@ -31,12 +31,12 @@ application.
 **Scheduler Configuration** − You can configure the start and end time of running the test.
 
 ### Execution Order of Test Elements
-1. Following is the execution order of the test plan elements −
-2. Configuration elements
-3. Pre-Processors
-4. Timers
-5. 1Sampler
-6. Post-Processors *unlessSampleResultisnull*
-7. Assertions *unlessSampleResultisnull*
+Following is the execution order of the test plan elements −
+1. Configuration elements
+2. Pre-Processors
+3. Timers
+4. 1Sampler
+5. Post-Processors *unlessSampleResultisnull*
+6. Assertions *unlessSampleResultisnull*
 
 
