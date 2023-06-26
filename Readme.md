@@ -15,7 +15,7 @@ A Test Plan can be viewed as a container for running tests. It defines what to t
 ## ___<ins>Test Plan - Elements</ins>___
 
 ### Thread Group
-Thread Group elements are the beginning points of your test plan. As the name suggests, the thread group elements control the number of threads JMeter will use during the test. We can also control the following via the Thread Group −
+Thread Group elements are the beginning points of your test plan. As the name suggests, the thread group elements control the number of threads JMeter will use during the test. We can also control the following via the Thread Group
  - Setting the number of threads
  - Setting the ramp-up time
  - Setting the number of test iterations
