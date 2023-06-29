@@ -73,8 +73,8 @@ The most commonly used assertion is the Response Assertion, which checks whether
 
 The Pattern can be either be:
 
-a “string” for “Equals” or “Substring” clauses
-a “Perl5-style” Regular Expression for “Contains” or “Matches” clauses
+a “string” for “Equals” or “Substring” clauses</br>
+a “Perl5-style” Regular Expression for “Contains” or “Matches” clauses</br>
 Response Entities that can be checked include the following.
 
 ___<ins>Text Response:</ins>___
@@ -129,3 +129,44 @@ In the GUI mode, there are two ways that failed assertions can be inspected:
 
  - ___<ins>Assertion Results Listener:</ins>___ This reveals the label under which all the assertions were taken.
  - ___<ins>View Results Tree Listener:</ins>___ This reveals all the assertions in the test plan.
+
+---
+---
+
+## ___<ins>Timers in JMeter</ins>___
+
+Jmeter threads usually run one after another without any time delay. This can be unrealistic in nature because a normal user will take time gaps to read or think between performing every action. That time is called Think Time and it should be added to make the script more realistic and reliable. To perform such operations JMeter is providing 9 types of timers and the user can select the one which suits the scenario.
+
+---
+
+### ___<ins>Timer’s Present in JMeter</ins>___
+ - Constant Timer
+ - Gaussian Random Timer
+ - Uniform Random Timer
+ - Constant Throughput Timer
+ - Synchronizing Timer
+ - JSR223 Timer
+ - BeanShell Timer
+ - BSF Timer
+ - Poisson Random Timer
+ - Every timer has its own usability.
+
+### ___<ins>Constant Timer</ins>___
+
+This can be used to add some delay/think time between each request. The constant timer has the following components. The name that we have given is displayed on the tree and here thread delay is taken in milliseconds. For example, if we want to add 3 seconds think time then we have to enter 3000 as shown above.
+
+### ___<ins>BeanShell Timer </ins>___
+
+This is a scripting-based timer in which we can develop the logic of how to implement a timer. The Bean shell timer has the following components.
+
+### ___<ins>JSR223 Timer </ins>___
+
+JSR223 Timer is also a scripting-based timer similar to Bean shell timer. In JSR223 Timer we can create delays between the user requests using the JSR223 Scripting language. JSR223 Timer components are as follows.
+
+
+### ___<ins>Uniform Random Timer </ins>___
+
+Uniform Random can be used to add a random amount of think time between the user requests. The Uniform Random Timer has the following components. Name element is meant to give a name to the timer that is to be displayed in the tree. Random Maximum Delay as the name suggests we should enter the maximum delay or think time then it will give a random think time to user requests which are not above the given value. For example, if we don’t want the time time to exceed 10sec then we should enter the value to this is 10000. Constant Delay Offset is an additional value taken in milliseconds. Similarly, other timers are used according to the situation or the requirement of testplan.
+
+---
+---
