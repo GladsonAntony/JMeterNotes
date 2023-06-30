@@ -170,3 +170,47 @@ Uniform Random can be used to add a random amount of think time between the user
 
 ---
 ---
+
+## ___<ins>Regular Expressions</ins>___
+
+JMeter, the most popular open source performance testing tool, can work with regular expressions, with the Regular Expression Extractor. Regular expressions are a tool used to extract a required part of the text by using advanced manipulations. Regular expressions are popular when testing web applications because they can be used to validate and to perform operations on a response from a web application.
+
+In JMeter, the Regular Expression Extractor is useful for extracting information from the response. For example, when you request a page and then need to get a link from the page that was downloaded. Another use case is saving the extracted information to a variable, so it can be used later on in the performance test, for example when testing an application that uses token authentication, like CSRF/XSRF.
+
+---
+
+### ___<ins>Regular Expression Extractor Syntax</ins>___
+When configuring the regular expressions in JMeter, use the same syntax as Perl5. But there is one very important difference between JMeter and Perl regexps processing. In Perl you have to use the “//” delimiter to specify regexp. So, the regular expressions reg might appear like this: ~/regular_expression/. But you cannot use “//” for the same purpose in JMeter, otherwise the regular expression will be parsed literally, and not logically. So, if you are using grouping in a regular expression, use the “()” parentheses to separate one group from another.
+
+---
+
+### ___<ins>Configuring the Regular Expression Extractor</ins>___
+Now I will shortly describe all of this element's fields.
+
+“Apply to” radio button
+
+You can choose whether the regular expression will be applied to the main sample results, to the sub-samples/embedded resources, or both.
+
+---
+
+### ___<ins>The possible options are:</ins>___
+
+ - ___<ins>Main sample only:</ins>___ Only applies to the main sample
+ - ___<ins>Sub-samples only:</ins>___ Only applies to the sub-samples
+ - ___<ins>Main sample and sub-samples:</ins>___ Applies to both main sample and sub-samples
+ - ___<ins>JMeter Variable:</ins>___ The expression is applied to the filled in variable “Field to check” radio button
+
+---
+
+### ___<ins>You can choose which field the regular expression is applied to. The possible options are:</ins>___
+
+ - ___<ins>Body</ins>___ - The body of the response. The content of your web-page, excluding headers, will be parsed with the regular expression.
+ - ___<ins>Body (unescaped)</ins>___ - The body of the response, with all HTML escape codes replaced. Note that HTML escapes are processed without regard to context, so some incorrect substitutions may be made.
+ - ___<ins>Headers</ins>___ - The headers of the response or the request
+ - ___<ins>URL</ins>___ – The URL of the request
+ - ___<ins>Response Code</ins>___ - e.g. 200
+ - ___<ins>Response Message</ins>___ - e.g. OK
+ - ___<ins>Name of Created Variable</ins>___ - The name of the variable where the parsing results will be saved in JMeter.
+
+---
+---
